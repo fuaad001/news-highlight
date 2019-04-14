@@ -13,7 +13,14 @@ This is an online news platform that provides a list of global news sources and 
 | Enable user to continue reading an article | Click 'Continue Reading' | Official source website page with article |
 ## Setup/Installation Requirements
 * Fork the data onto your own personal repository.
-* To access the live website, click on this url https://fuaad001.github.io/
+* Clone Project to your machine
+* Activate a virtual environment on terminal: `source virtual/bin/activate`
+* Install all the requirements found in requirements file.
+* Fill the start.sh file with your 'api key' from the https://news.org
+* On your terminal run `chmod a+x start.py`
+* On your terminal run `./start.py`
+* Access the live site using the local host provided
+* Or access the live website by clicking on this url https://news-highlights001.herokuapp.com/
 ## Known Bugs
 No Bugs
 ## Technologies Used
