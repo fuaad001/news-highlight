@@ -1,0 +1,111 @@
+.card{
+  width: 33%;
+  margin-bottom: 3%;
+  padding: 2%;
+  font-family: 'ZCOOL XiaoWei', serif;
+  height: 500px;
+}
+
+.card, .piece, .piece2, .piece h4, .piece2 h4, h2, h3{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card img, .piece2 img{
+  width: 100%;
+  height: 200px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.col-md-3 img{
+  width: 100%;
+  margin: 12%
+}
+
+.piece2 img{
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  height: 250px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+form{
+  font-family: 'Merienda', cursive;
+}
+
+.piece, .piece2{
+  padding: 1%;
+  width: 33%;
+  height: 300px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.piece2{
+  height: 900px;
+}
+
+.piece button, .piece2 button, .card button{
+  font-family: 'ZCOOL XiaoWei', serif;
+  margin: 1%;
+}
+
+.piece h4, .piece2 h4{
+  color: #28a745;
+  padding: 1.5%;
+  box-shadow: 3px 3px 3px grey;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.title{
+  text-align: center;
+  padding: 1%;
+  font-family: 'Cinzel', serif;
+}
+
+h2{
+  text-align: center;
+  background-color: #17a2b8;
+  margin-top: -0.3%;
+  font-family: 'Merienda', cursive;
+  padding: 1.5%;
+  color: white;
+}
+
+h3{
+  text-align: center;
+  background-color: white;
+  padding: 1.5%;
+  font-family: 'Merienda', cursive;
+  color: #28a745;
+}
+
+@media only screen and (min-width: 812px) {
+  .card{
+    height: 450px;
+  }
+  .piece{
+    height: 245px;
+  }
+  .piece2{
+    height: 750px;
+  }
+  .btn-default{
+    margin-top: -16%;
+  }
+  label{
+    margin-top: 3%;
+  }
+}
