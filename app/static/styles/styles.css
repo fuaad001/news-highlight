@@ -26,17 +26,18 @@
   box-shadow: 3px 3px 3px grey;
 }
 
-.col-md-3 img{
-  width: 100%;
-  margin: 12%
-}
-
 .piece2 img{
   width: 100%;
   margin: auto;
   margin-top: 2%;
   height: 250px;
 }
+
+.col-md-3 img{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  }
 
 ul {
   list-style-type: none;
@@ -78,7 +79,6 @@ form{
 h2{
   text-align: center;
   background-color: #17a2b8;
-  margin-top: -0.3%;
   font-family: 'Merienda', cursive;
   padding: 1.5%;
   color: white;
@@ -107,5 +107,12 @@ h3{
   }
   label{
     margin-top: 3%;
+  }
+  .col-md-3 img{
+  width: 100%;
+  margin: 12%
+  }
+  h2{
+    margin-top: -0.3%;
   }
 }

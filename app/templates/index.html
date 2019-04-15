@@ -15,7 +15,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <a href="/"><img src="../static/image1.png"></a> 
+            <a href="/"><img src="../static/image1.png"></a>
           </div>
           <div class="col-md-6 title">
             <h1>Global News Highlights</h1>
@@ -39,17 +39,17 @@
 
         </div>
         <div class="top_headlines">
-          <div class="col-md-12">
+          <div class="col-sm-12 col-md-12">
             <h2>Top Headlines Today</h2>
           </div>
-          <div class="col-md-12">
+          <div class="col-sm-12 col-md-12">
             <ul>
               {{macro.displayTopHeadlines(headlines)}}
             </ul>
           </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-sm-12 col-md-12">
           <h2>Available News Sources</h2>
         </div>
 
@@ -57,10 +57,10 @@
           {% if sort_type == 'Language' %}
             <div class="language">
               {% for Language in Languages %}
-                <div class="col-md-12">
+                <div class="col-sm-12 col-md-12">
                   {{macro.displayLanguage(Language)}}
                 </div>
-                <ul class="col-md-12">
+                <ul class="col-sm-12 col-md-12">
                   {{macro.displayNewsSources(Language)}}
                 </ul>
               {% endfor %}
@@ -69,10 +69,10 @@
           {% elif sort_type == 'Category' %}
             <div class="category">
               {% for Category in Categories %}
-                <div class="col-md-12">
+                <div class="col-sm-12 col-md-12">
                   {{macro.displayCategory(Category)}}
                 </div>
-                <ul class="col-md-12">
+                <ul class="col-sm-12 col-md-12">
                   {{macro.displayNewsSources(Category)}}
                 </ul>
               {% endfor %}
@@ -80,7 +80,7 @@
 
           {% else %}
             <div class="all">
-              <ul class="col-md-12">
+              <ul class="col-sm-12 col-md-12">
                 {{macro.displayNewsSources(sources)}}
               </ul>
             </div>
