@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from . import main
-from ..request import get_sources, view_source, get_by_category, get_by_language, get_top_headlines
+from ..request import get_sources, view_source, get_by_category, get_by_language, search_article, get_top_headlines
 
 @main.route('/')
 def index():
@@ -34,4 +34,20 @@ def source(id):
     news_articles = view_source(id)
     title = id
 
-    return render_template('source.html', title = title, news = news_articles)
+    searched_name = request.args.get('search_query')
+
+    if searched_name:
+        return redirect(url_for('main.search', name = searched_name, id = id))
+    else:
+        return render_template('source.html', title = title, news = news_articles)
+
+@main.route('/search/<id>/<name>')
+def search(id, name):
+    '''
+    View function to display the search results
+    '''
+    name_list = name.split(" ")
+    name_format = "+".join(name_list)
+    search_articles = search_article(name_format, id)
+    title = f'search results for {name}'
+    return render_template('search.html', news = search_articles)

@@ -11,15 +11,17 @@ top_headlines_url = None
 everything_url = None
 category_url = None
 language_url = None
+search_url = None
 
 def configure_request(app):
-    global api_key, sources_url, top_headlines_url, everything_url, category_url, language_url
+    global api_key, sources_url, top_headlines_url, everything_url, category_url, language_url, search_url
     api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_URL']
     top_headlines_url = app.config['TOP_HEADLINES_URL']
     everything_url = app.config['EVERYTHING_URL']
     category_url = app.config['CATEGORY_URL']
     language_url = app.config['LANGUAGE_URL']
+    search_url = app.config['SEARCH_URL']
 
 def get_sources():
     '''
@@ -168,3 +170,18 @@ def process_news(articles_list):
             source_articles.append(article_object)
 
     return source_articles
+
+def search_article(name , source_id):
+    get_search_result_url = search_url.format(source_id, name, api_key)
+
+    with urllib.request.urlopen(get_search_result_url) as url:
+        search_article_data = url.read()
+        search_article_response = json.loads(search_article_data)
+
+        search_results = None
+
+        if search_article_response['articles']:
+            search_list = search_article_response['articles']
+            search_results = process_news(search_list)
+
+    return search_results
