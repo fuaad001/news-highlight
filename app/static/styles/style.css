@@ -1,9 +1,9 @@
 .card{
-  width: 33%;
+  width: 100%;
   margin-bottom: 3%;
   padding: 2%;
   font-family: 'ZCOOL XiaoWei', serif;
-  height: 500px;
+  height: 400px;
 }
 
 .card, .piece, .piece2, .piece h4, .piece2 h4, h2, h3{
@@ -49,8 +49,8 @@ form{
 
 .piece, .piece2{
   padding: 1%;
-  width: 33%;
-  height: 300px;
+  width: 100%;
+  height: 250px;
   font-family: 'Libre Baskerville', serif;
 }
 
@@ -114,5 +114,8 @@ h3{
   }
   h2{
     margin-top: -0.3%;
+  }
+  .card, .piece, .piece2{
+    width: 33%;
   }
 }

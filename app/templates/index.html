@@ -36,16 +36,15 @@
         </div>
 
         <div class="row">
-
-        </div>
-        <div class="top_headlines">
-          <div class="col-sm-12 col-md-12">
-            <h2>Top Headlines Today</h2>
-          </div>
-          <div class="col-sm-12 col-md-12">
-            <ul>
-              {{macro.displayTopHeadlines(headlines)}}
-            </ul>
+          <div class="top_headlines">
+            <div class="col-sm-12 col-md-12">
+              <h2>Top Headlines Today</h2>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <ul>
+                {{macro.displayTopHeadlines(headlines)}}
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -60,7 +59,7 @@
                 <div class="col-sm-12 col-md-12">
                   {{macro.displayLanguage(Language)}}
                 </div>
-                <ul class="col-sm-12 col-md-12">
+                <ul class="row">
                   {{macro.displayNewsSources(Language)}}
                 </ul>
               {% endfor %}
@@ -72,7 +71,7 @@
                 <div class="col-sm-12 col-md-12">
                   {{macro.displayCategory(Category)}}
                 </div>
-                <ul class="col-sm-12 col-md-12">
+                <ul class="row">
                   {{macro.displayNewsSources(Category)}}
                 </ul>
               {% endfor %}
@@ -80,7 +79,7 @@
 
           {% else %}
             <div class="all">
-              <ul class="col-sm-12 col-md-12">
+              <ul class="row">
                 {{macro.displayNewsSources(sources)}}
               </ul>
             </div>
